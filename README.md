@@ -1,7 +1,7 @@
 # Cyclistic Analytics 2023
 
 
-![A9mspcje_1s7ldzz_tg-removebg-preview](https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/08c6e02b-af05-4370-942d-9aecb26d6527)
+![](https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/08c6e02b-af05-4370-942d-9aecb26d6527)
 
 ### Introduction
 
