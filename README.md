@@ -59,9 +59,9 @@ FROM
 	cyclistic.tripdata_2023;
 ```
 
-<p align="center" width="100%">
-    <img width="60%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/24ab5dce-c15b-4cba-8993-a6bca6242077">
-</p>
+| total_trips | member_trips | casual_trips | member_percent | casual_percent |
+|-------------|--------------|--------------|----------------|----------------|
+| 5719877     | 3660698      | 2059179      | 64.00          | 36.00          |
 
 <br>
 
@@ -77,14 +77,15 @@ GROUP BY
 	member_casual;
 ```
 
-<p align="center" width="100%">
-    <img width="60%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7073f244-b152-4a61-9f47-ca08747a872c">
-</p>
+| member_casual | max_ride_length | min_ride_length | avg_ride_length |
+| ------------- | --------------- | --------------- | --------------- |
+| member        | 23:59:55        | 00:00:00        | 00:12:04.2609   |
+| casual        | 23:59:55        | 00:00:00        | 00:21:10.7038   |
 
 <br>
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/b52b11c4-7d5b-409e-ac0d-bd48ebe98fcf">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/6c82cbaa-daad-4569-ae9a-3ef2b6939f73">
 </p>
 
 <br>
