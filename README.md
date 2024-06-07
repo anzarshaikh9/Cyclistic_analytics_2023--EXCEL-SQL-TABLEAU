@@ -60,7 +60,7 @@ FROM
 ```
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/24ab5dce-c15b-4cba-8993-a6bca6242077">
+    <img width="60%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/24ab5dce-c15b-4cba-8993-a6bca6242077">
 </p>
 
 <br>
@@ -78,13 +78,13 @@ GROUP BY
 ```
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7073f244-b152-4a61-9f47-ca08747a872c">
+    <img width="60%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7073f244-b152-4a61-9f47-ca08747a872c">
 </p>
 
 <br>
 
 <p align="center" width="100%">
-    <img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/b52b11c4-7d5b-409e-ac0d-bd48ebe98fcf">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/b52b11c4-7d5b-409e-ac0d-bd48ebe98fcf">
 </p>
 
 <br>
