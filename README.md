@@ -1,8 +1,11 @@
 <h1 align="center">Cyclistic Analytics 2023</h1>
+
 <br> 
+
 <p align="center" width="100%">
     <img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/425f9a1c-83d9-4dbc-946b-2b18d67eb250">
 </p>
+
 <br>
 
 ## Introduction
@@ -42,3 +45,48 @@ In this dataset, minimal cleaning was required, primarily involving some data fo
 
 ## Data Analysis & Visualization
 
+1. Conducting a comprehensive data exploration and generating detailed summary statistics for bike trips in the year 2023. This includes calculating the total number of bike trips and determining the proportion of trips taken by members versus casual users. Additionally, ride length metrics such as the maximum, minimum, and average ride lengths will be analyzed. These statistics will be computed separately for both member and casual users to provide a clear comparison.
+<br>
+
+```sql
+SELECT
+    COUNT(*) AS total_trips,
+    COUNT(IF(member_casual = 'member', 1, NULL)) AS member_trips,
+    COUNT(IF(member_casual = 'casual', 1, NULL)) AS casual_trips,
+    ROUND((COUNT(IF(member_casual = 'member', 1, NULL)) / COUNT(*)) * 100, 2) AS member_percent,
+    ROUND((COUNT(IF(member_casual = 'casual', 1, NULL)) / COUNT(*)) * 100, 2) AS casual_percent
+FROM
+	cyclistic.tripdata_2023;
+```
+
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/24ab5dce-c15b-4cba-8993-a6bca6242077">
+</p>
+
+<br>
+
+```sql
+SELECT
+    DISTINCT member_casual,
+    MAX(ride_length) AS max_ride_length,
+    MIN(ride_length) AS min_ride_length,
+    SEC_TO_TIME(AVG(TIME_TO_SEC(ride_length))) AS avg_ride_length
+FROM
+	cyclistic.tripdata_2023
+GROUP BY
+	member_casual;
+```
+
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7073f244-b152-4a61-9f47-ca08747a872c">
+</p>
+
+<br>
+
+<p align="center" width="100%">
+    <img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/b52b11c4-7d5b-409e-ac0d-bd48ebe98fcf">
+</p>
+
+<br>
+
+2. 
