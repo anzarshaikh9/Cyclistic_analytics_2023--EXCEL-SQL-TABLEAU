@@ -16,20 +16,23 @@ The goal of the company is to maximize the number of annual memberships, which i
 <br>
 <br>
 
+***
 ## Problem Statement
 
 I need to understand how annual members and casual riders use Cyclistic bikes differently. By analyzing the differences in usage patterns, trip durations, and popular routes, I aim to identify key differences between these two groups. These insights will help the company design targeted marketing strategies to encourage casual riders to become annual members, ultimately supporting Cyclistic's growth objectives.
 <br>
 <br>
 
+***
 ## Data
 
 I'm utilizing Cyclistic's historical trip data for trend analysis and identification. The dataset comprises 12 CSV files, each representing a month from the year 2023. The initial raw data contains 13 columns, but after data manipulation, it expands to 14 columns. In total, there are 5,719,877 rows combining all 12 CSV files.
 
-*Note: This is public data and it has been made available by Motivate International Inc. under this [license](https://www.divvybikes.com/data-license-agreement).*
-<br>
+>[!Note]
+>*This is public data and it has been made available by Motivate International Inc. under this [license](https://www.divvybikes.com/data-license-agreement).*
 <br>
 
+***
 ## Tools
 
 - Excel - Data Manipulation
@@ -37,14 +40,19 @@ I'm utilizing Cyclistic's historical trip data for trend analysis and identifica
 - Tableau - Data Visualization
 <br>
 
+***
 ## Data Manipulation
 
 In this dataset, minimal cleaning was required, primarily involving some data formatting. In Excel, I created a column called 'ride_length' to calculate the duration of each ride by subtracting the 'started_at' column from the 'ended_at' column (e.g., =D2-C2). This new column was formatted as HH:MM:SS. Following this, I proceeded to the analysis step.
 <br>
 <br>
 
+***
 ## Data Analysis & Visualization
 
+Before beginning the analysis, I set up a schema in MySQL named 'cyclistic' to organize the database effectively. Within this schema, I created a table called 'tripdata_2023' to store the relevant data. After setting up the table, I imported all the necessary data into 'tripdata_2023', ensuring that the data was properly structured and ready for analysis. This setup allowed for efficient data management and streamlined the subsequent analytical processes.
+
+***
 1. Conducting a comprehensive data exploration and generating detailed summary statistics for bike trips in the year 2023. This includes calculating the total number of bike trips and determining the proportion of trips taken by members versus casual users. Additionally, ride length metrics such as the maximum, minimum, and average ride lengths will be analyzed. These statistics will be computed separately for both member and casual users to provide a clear comparison.
 <br>
 
@@ -58,10 +66,13 @@ SELECT
 FROM
 	cyclistic.tripdata_2023;
 ```
+<div align="center">
 
 | total_trips | member_trips | casual_trips | member_percent | casual_percent |
 |-------------|--------------|--------------|----------------|----------------|
 | 5719877     | 3660698      | 2059179      | 64.00          | 36.00          |
+
+</div>
 
 <br>
 
@@ -76,18 +87,116 @@ FROM
 GROUP BY
 	member_casual;
 ```
-
+<div align="center">
+	
 | member_casual | max_ride_length | min_ride_length | avg_ride_length |
 | ------------- | --------------- | --------------- | --------------- |
 | member        | 23:59:55        | 00:00:00        | 00:12:04.2609   |
 | casual        | 23:59:55        | 00:00:00        | 00:21:10.7038   |
+
+</div>
 
 <br>
 
 <p align="center" width="100%">
     <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/6c82cbaa-daad-4569-ae9a-3ef2b6939f73">
 </p>
-
 <br>
 
+***
 2. 
+
+```sql
+SELECT
+    time_format(time(started_at), "%h %p") AS hour_of_day,
+    count(*) AS member_trips
+FROM
+	cyclistic.tripdata_2023
+WHERE
+	member_casual = 'member'
+GROUP BY
+	hour_of_day
+ORDER BY
+	member_trips DESC;
+```
+
+```sql
+SELECT
+    time_format(time(started_at), "%h %p") AS hour_of_day,
+    count(*) AS casual_trips
+FROM
+	cyclistic.tripdata_2023
+WHERE
+	member_casual = 'casual'
+GROUP BY
+	hour_of_day
+ORDER BY
+	casual_trips DESC;
+```
+<div align="center">
+<table>
+<td>
+
+| hour_of_day | member_trips |
+|-------------|--------------|
+| 05 PM       | 387973       |
+| 04 PM       | 331643       |
+| 06 PM       | 307787       |
+| 03 PM       | 246741       |
+| 08 AM       | 244218       |
+| 07 PM       | 217972       |
+| 02 PM       | 201905       |
+| 12 PM       | 199941       |
+| 01 PM       | 198738       |
+| 07 AM       | 194611       |
+| 11 AM       | 176379       |
+| 09 AM       | 164912       |
+| 08 PM       | 151659       |
+| 10 AM       | 148848       |
+| 09 PM       | 117765       |
+| 06 AM       | 105310       |
+| 10 PM       | 88006        |
+| 11 PM       | 56438        |
+| 12 AM       | 35534        |
+| 05 AM       | 34144        |
+| 01 AM       | 21185        |
+| 02 AM       | 12275        |
+| 04 AM       | 8778         |
+| 03 AM       | 7936         |
+
+</td><td>
+
+| hour_of_day | casual_trips |
+|-------------|--------------|
+| 05 PM       | 199282       |
+| 04 PM       | 182502       |
+| 06 PM       | 172201       |
+| 03 PM       | 159268       |
+| 02 PM       | 142731       |
+| 01 PM       | 136656       |
+| 12 PM       | 130779       |
+| 07 PM       | 127271       |
+| 11 AM       | 110524       |
+| 08 PM       | 91921        |
+| 10 AM       | 86606        |
+| 09 PM       | 77308        |
+| 08 AM       | 70700        |
+| 09 AM       | 70005        |
+| 10 PM       | 68359        |
+| 07 AM       | 53000        |
+| 11 PM       | 49292        |
+| 12 AM       | 36896        |
+| 06 AM       | 30151        |
+| 01 AM       | 23929        |
+| 02 AM       | 14456        |
+| 05 AM       | 11429        |
+| 03 AM       | 7944         |
+| 04 AM       | 5969         |
+
+</td>
+</table>
+</div>
+
+***
+3.
+
