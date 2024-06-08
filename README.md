@@ -107,6 +107,7 @@ GROUP BY
 2. 
 
 ```sql
+-- For casual riders replace all the text from 'member' to 'casual'
 SELECT
     time_format(time(started_at), "%h %p") AS hour_of_day,
     count(*) AS member_trips
@@ -120,19 +121,6 @@ ORDER BY
 	member_trips DESC;
 ```
 
-```sql
-SELECT
-    time_format(time(started_at), "%h %p") AS hour_of_day,
-    count(*) AS casual_trips
-FROM
-	cyclistic.tripdata_2023
-WHERE
-	member_casual = 'casual'
-GROUP BY
-	hour_of_day
-ORDER BY
-	casual_trips DESC;
-```
 <div align="center">
 <table>
 <td>
@@ -199,4 +187,155 @@ ORDER BY
 
 ***
 3.
+
+
+```sql
+-- For casual riders replace all the text from 'member' to 'casual'
+SELECT
+	DAYNAME(started_at) AS day_of_week,
+	COUNT(*) AS member_trips,
+	SEC_TO_TIME(ROUND(AVG(TIME_TO_SEC(ride_length)), 0)) AS member_avg_ride_length
+FROM
+	cyclistic.tripdata_2023
+WHERE
+	member_casual = 'member'
+GROUP BY
+	day_of_week
+ORDER BY
+	member_trips DESC;
+```
+
+<div align="center">
+<table>
+<td>
+
+| day_of_week | member_trips | member_avg_ride_length |
+|-------------|--------------|------------------------|
+| Thursday    | 589590       | 00:11:35               |
+| Wednesday   | 586459       | 00:11:31               |
+| Tuesday     | 576754       | 00:11:30               |
+| Friday      | 531599       | 00:12:00               |
+| Monday      | 493156       | 00:11:28               |
+| Saturday    | 472860       | 00:13:27               |
+| Sunday      | 408860       | 00:13:27               |
+
+</td><td>
+
+| day_of_week | casual_trips | casual_avg_ride_length |
+|-------------|--------------|------------------------|
+| Saturday    | 410706       | 00:24:01               |
+| Sunday      | 335718       | 00:24:43               |
+| Friday      | 311925       | 00:20:32               |
+| Thursday    | 270612       | 00:18:29               |
+| Wednesday   | 249166       | 00:18:03               |
+| Tuesday     | 246224       | 00:18:57               |
+| Monday      | 234828       | 00:20:48               |
+
+</td>
+</table>
+</div>
+
+***
+4.
+
+```sql
+-- For casual riders replace all the text from 'member' to 'casual'
+SELECT
+	MONTHNAME(started_at) AS month,
+	COUNT(*) AS member_trips,
+    	SEC_TO_TIME(ROUND(AVG(TIME_TO_SEC(ride_length)), 0)) AS member_avg_ride_length
+FROM
+	cyclistic.tripdata_2023
+WHERE
+	member_casual = 'member'
+GROUP BY
+	month
+ORDER BY
+	member_trips DESC;
+```
+
+<div align="center">
+<table>
+<td>
+
+| month    | member_trips | member_avg_ride_length |
+|----------|--------------|------------------------|
+| August   | 460563       | 00:13:11               |
+| July     | 436292       | 00:13:13               |
+| June     | 418388       | 00:12:52               |
+| September| 404736       | 00:12:38               |
+| May      | 370646       | 00:12:35               |
+| October  | 360042       | 00:11:34               |
+| April    | 279305       | 00:11:28               |
+| November | 264126       | 00:11:01               |
+| March    | 196477       | 00:10:12               |
+| December | 172401       | 00:10:47               |
+| January  | 150293       | 00:10:04               |
+| February | 147429       | 00:10:28               |
+
+</td><td>
+
+| month     | casual_rides | casual_avg_ride_length |
+|-----------|--------------|------------------------|
+| July      | 331358       | 00:23:35               |
+| August    | 311130       | 00:22:40               |
+| June      | 301230       | 00:22:19               |
+| September | 261635       | 00:21:15               |
+| May       | 234181       | 00:22:39               |
+| October   | 177071       | 00:19:04               |
+| April     | 147285       | 00:21:20               |
+| November  | 98392        | 00:16:10               |
+| March     | 62201        | 00:16:01               |
+| December  | 51672        | 00:14:49               |
+| February  | 43016        | 00:16:38               |
+| January   | 40008        | 00:14:17               |
+
+</td>
+</table>
+</div>
+
+***
+5.
+
+```sql
+-- For casual riders replace all the text from 'member' to 'casual'
+SELECT
+	start_station_name,
+	COUNT(*) AS total,
+	COUNT(IF(member_casual = 'member', 1, NULL)) AS member,
+    	COUNT(IF(member_casual = 'casual', 1, NULL)) AS casual
+FROM
+	cyclistic.tripdata_2023
+WHERE
+	start_station_name != ''
+GROUP BY
+	start_station_name
+ORDER BY
+	member DESC
+LIMIT
+	10;
+```
+
+***
+6.
+
+```sql
+SELECT
+	DISTINCT rideable_type,
+	COUNT(*) AS total_bike_trip,
+    	COUNT(IF(member_casual = 'member', 1, NULL)) AS member_bike_trip,
+    	COUNT(IF(member_casual = 'casual', 1, NULL)) AS casual_bike_trip,
+	ROUND((COUNT(IF(member_casual = 'member', 1, NULL)) / COUNT(*)) * 100, 2) AS member_percent,
+    	ROUND((COUNT(IF(member_casual = 'casual', 1, NULL)) / COUNT(*)) * 100, 2) AS casual_percent
+FROM
+	cyclistic.tripdata_2023
+GROUP BY
+	rideable_type;
+```
+
+| rideable_type | total_bike_trip  | member_bike_trip  | casual_bike_trip  | member_percent | casual_percent |
+|---------------|------------------|-------------------|-------------------|----------------|----------------|
+| electric_bike | 2945579          | 1841568           | 1104011           | 62.52          | 37.48          |
+| classic_bike  | 2696011          | 1819130           | 876881            | 67.47          | 32.53          |
+| docked_bike   | 78287            | 0                 | 78287             | 0.00           | 100.00         |
 
