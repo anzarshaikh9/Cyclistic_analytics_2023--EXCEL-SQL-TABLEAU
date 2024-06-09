@@ -99,8 +99,9 @@ GROUP BY
 <br>
 
 <p align="center" width="100%">
-    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/6c82cbaa-daad-4569-ae9a-3ef2b6939f73">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/3265abab-acef-4628-80f5-98d85c372819">
 </p>
+
 <br>
 
 ***
@@ -184,6 +185,10 @@ ORDER BY
 </td>
 </table>
 </div>
+
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/3265abab-acef-4628-80f5-98d85c372819">
+</p>
 
 ***
 3.
