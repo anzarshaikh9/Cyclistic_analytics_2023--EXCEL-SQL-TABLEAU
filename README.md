@@ -241,6 +241,11 @@ ORDER BY
 </table>
 </div>
 
+<p align="center" width="100%">
+    <img width="85%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/d16ae077-d9fb-46ce-a238-304bc3987e1e">
+</p>
+
+
 ***
 4.
 
@@ -300,6 +305,8 @@ ORDER BY
 </table>
 </div>
 
+![Dashboard 2 (3)](https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/cb1c6ef6-89f9-4760-afee-7764fa19795e)
+
 ***
 5.
 
@@ -321,6 +328,10 @@ ORDER BY
 LIMIT
 	10;
 ```
+<p align="center" width="100%">
+    <img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7c4bc344-7341-4d7f-8a1d-39a775b606a7">
+	<img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/8225f34c-1f06-4b95-9a58-c0c9e11cef27">
+</p>
 
 ***
 6.
@@ -338,6 +349,7 @@ FROM
 GROUP BY
 	rideable_type;
 ```
+<div align="center">
 
 | rideable_type | total_bike_trip  | member_bike_trip  | casual_bike_trip  | member_percent | casual_percent |
 |---------------|------------------|-------------------|-------------------|----------------|----------------|
@@ -345,3 +357,8 @@ GROUP BY
 | classic_bike  | 2696011          | 1819130           | 876881            | 67.47          | 32.53          |
 | docked_bike   | 78287            | 0                 | 78287             | 0.00           | 100.00         |
 
+</div>
+
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/252e7dbd-f109-4569-abc6-aaebdc0b5821">
+</p>
