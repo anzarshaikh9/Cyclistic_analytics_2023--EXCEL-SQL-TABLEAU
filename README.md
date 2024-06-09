@@ -330,6 +330,43 @@ ORDER BY
 LIMIT
 	10;
 ```
+
+<div align="center">
+<table>
+<td>
+
+| start_station_name          | total | member | casual |
+|-----------------------------|-------|--------|--------|
+| Clinton St & Washington Blvd| 32715 | 26216  | 6499   |
+| Kingsbury St & Kinzie St    | 34966 | 26172  | 8794   |
+| Clark St & Elm St           | 35805 | 25001  | 10804  |
+| Wells St & Concord Ln       | 33590 | 21419  | 12171  |
+| Clinton St & Madison St     | 26840 | 20596  | 6244   |
+| Wells St & Elm St           | 30407 | 20400  | 10007  |
+| University Ave & 57th St    | 26647 | 20038  | 6609   |
+| Broadway & Barry Ave        | 28485 | 18959  | 9526   |
+| Loomis St & Lexington St    | 21794 | 18901  | 2893   |
+| State St & Chicago Ave      | 25789 | 18485  | 7304   |
+
+</td><td>
+
+| start_station_name                | total | member | casual |
+|-----------------------------------|-------|--------|--------|
+| Streeter Dr & Grand Ave           | 63249 | 17219  | 46030  |
+| DuSable Lake Shore Dr & Monroe St | 40288 | 9801   | 30487  |
+| Michigan Ave & Oak St             | 37383 | 14719  | 22664  |
+| DuSable Lake Shore Dr & North Blvd| 35966 | 15628  | 20338  |
+| Millennium Park                   | 30156 | 9928   | 20228  |
+| Shedd Aquarium                    | 22805 | 5022   | 17783  |
+| Theater on the Lake               | 30068 | 13709  | 16359  |
+| Dusable Harbor                    | 21459 | 5968   | 15491  |
+| Wells St & Concord Ln             | 33590 | 21419  | 12171  |
+| Montrose Harbor                   | 20126 | 8139   | 11987  |
+
+</td>
+</table>
+</div>
+
 <p align="center" width="100%">
     <img width="45%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7c4bc344-7341-4d7f-8a1d-39a775b606a7">
 	<img width="45%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/8225f34c-1f06-4b95-9a58-c0c9e11cef27">
