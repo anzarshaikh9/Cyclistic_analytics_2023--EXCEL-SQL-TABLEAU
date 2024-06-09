@@ -108,7 +108,6 @@ GROUP BY
 2. 
 
 ```sql
--- For casual riders replace all the text from 'member' to 'casual'
 SELECT
     time_format(time(started_at), "%h %p") AS hour_of_day,
     count(*) AS member_trips
@@ -120,6 +119,8 @@ GROUP BY
 	hour_of_day
 ORDER BY
 	member_trips DESC;
+
+/* For casual riders replace all the text from 'member' to 'casual' */
 ```
 
 <div align="center">
@@ -187,7 +188,7 @@ ORDER BY
 </div>
 
 <p align="center" width="100%">
-    <img width="75%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7b428d4b-5f10-40a2-89e2-c81013669609">
+    <img width="85%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7b428d4b-5f10-40a2-89e2-c81013669609">
 </p>
 
 
@@ -196,7 +197,6 @@ ORDER BY
 
 
 ```sql
--- For casual riders replace all the text from 'member' to 'casual'
 SELECT
 	DAYNAME(started_at) AS day_of_week,
 	COUNT(*) AS member_trips,
@@ -209,6 +209,8 @@ GROUP BY
 	day_of_week
 ORDER BY
 	member_trips DESC;
+
+/* For casual riders replace all the text from 'member' to 'casual' */
 ```
 
 <div align="center">
@@ -242,7 +244,7 @@ ORDER BY
 </div>
 
 <p align="center" width="100%">
-    <img width="85%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/d16ae077-d9fb-46ce-a238-304bc3987e1e">
+    <img width="95%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/d16ae077-d9fb-46ce-a238-304bc3987e1e">
 </p>
 
 
@@ -250,7 +252,6 @@ ORDER BY
 4.
 
 ```sql
--- For casual riders replace all the text from 'member' to 'casual'
 SELECT
 	MONTHNAME(started_at) AS month,
 	COUNT(*) AS member_trips,
@@ -263,6 +264,8 @@ GROUP BY
 	month
 ORDER BY
 	member_trips DESC;
+
+/* For casual riders replace all the text from 'member' to 'casual' */
 ```
 
 <div align="center">
@@ -311,7 +314,6 @@ ORDER BY
 5.
 
 ```sql
--- For casual riders replace all the text from 'member' to 'casual'
 SELECT
 	start_station_name,
 	COUNT(*) AS total,
@@ -324,13 +326,13 @@ WHERE
 GROUP BY
 	start_station_name
 ORDER BY
-	member DESC
+	member DESC -- for casual rider replace from 'member' to 'casual'
 LIMIT
 	10;
 ```
 <p align="center" width="100%">
-    <img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7c4bc344-7341-4d7f-8a1d-39a775b606a7">
-	<img width="40%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/8225f34c-1f06-4b95-9a58-c0c9e11cef27">
+    <img width="45%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7c4bc344-7341-4d7f-8a1d-39a775b606a7">
+	<img width="45%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/8225f34c-1f06-4b95-9a58-c0c9e11cef27">
 </p>
 
 ***
