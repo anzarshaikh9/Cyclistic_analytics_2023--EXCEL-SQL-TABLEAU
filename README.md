@@ -186,7 +186,9 @@ ORDER BY
 </table>
 </div>
 
-![Dashboard 2 (2)](https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7b428d4b-5f10-40a2-89e2-c81013669609)
+<p align="center" width="100%">
+    <img width="75%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7b428d4b-5f10-40a2-89e2-c81013669609">
+</p>
 
 
 ***
