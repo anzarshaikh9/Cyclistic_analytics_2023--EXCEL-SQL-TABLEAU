@@ -190,6 +190,8 @@ ORDER BY
     <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/3265abab-acef-4628-80f5-98d85c372819">
 </p>
 
+![Dashboard 2 (1)](https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/b451e858-44ba-4d7f-b0b8-38969804040c)
+
 ***
 3.
 
