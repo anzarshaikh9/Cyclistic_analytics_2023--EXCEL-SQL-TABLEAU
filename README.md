@@ -8,6 +8,17 @@
 
 <br>
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Problem Statement](#problem-statement)
+3. [Data](#data)
+4. [Tools](#tools)
+5. [Data Manipulation](#data-manipulation)
+6. [Data Analysis & Visualization](#data-analysis-&-visualization)
+7. [Results/Findings](#results/findings)
+8. [Recommendation](#recommendation)
+
 ## Introduction
 
 Welcome to my Cyclistic bike-share analysis project! In this project, I am analyzing data for Cyclistic, a fictional bike-share company based in Chicago. Cyclistic offers a diverse range of bicycles, including traditional bikes, reclining bikes, hand tricycles, and cargo bikes, through a network of over 5,800 bicycles and 600 docking stations. Most users ride for leisure, although a significant portion about 30% use the bikes for their daily commute. Cyclistic's marketing strategy has focused on building general awareness and appealing to broad consumer segments. They offer flexible pricing plans including single-ride passes, full-day passes, and annual memberships. Casual riders buy single-ride or full-day passes, while annual memberships are for Cyclistic members.
