@@ -441,3 +441,19 @@ GROUP BY
 ## Results/Findings
 
 - The hours between afternoon and evening are peak hours, especially at 5 p.m., for both members and casual riders.
+- Members primarily use bikes during weekdays, while casual riders peak on weekends. The duration of rides tends to reach its peak on weekends for both the group.
+- Summer months (June-August) see the highest usage for both groups.
+- Casual riders tend to have longer average ride lengths compared to members.
+- Members frequently use stations near workplaces (e.g., Clinton St & Washington Blvd). While casual riders prefer tourist attractions (e.g., Streeter Dr & Grand Ave).
+- Electric bikes are popular among both groups, with docked bikes being exclusive to casual riders.
+
+<br>
+
+## Recommendation
+
+- Create marketing campaigns targeting casual riders during weekends and summer months when their usage peaks.
+- Offer special incentives for casual riders to convert them into members, emphasizing benefits like shorter ride lengths and consistent weekday usage.
+- Enhance popular stations used by casual riders with better facilities and signage to improve their experience and encourage membership.
+- Organize events or promotions around peak usage times (e.g., 5 PM) to engage both casual and member riders.
+
+<br>
