@@ -335,6 +335,12 @@ LIMIT
 <table>
 <td>
 
+<div align="center">
+
+### Member  
+
+</div>
+
 | start_station_name          | total | member | casual |
 |-----------------------------|-------|--------|--------|
 | Clinton St & Washington Blvd| 32715 | 26216  | 6499   |
@@ -349,6 +355,12 @@ LIMIT
 | State St & Chicago Ave      | 25789 | 18485  | 7304   |
 
 </td><td>
+
+<div align="center">
+
+### Casual  
+
+</div>
 
 | start_station_name                | total | member | casual |
 |-----------------------------------|-------|--------|--------|
