@@ -105,7 +105,8 @@ GROUP BY
 <br>
 
 ***
-2. 
+2. Analyzing bike trips over the course of a year, categorized by the hour of the day for both members and casual riders, provides valuable insights into usage patterns. This analysis reveals distinct trends between these two groups, showcasing their preferred times for bike usage. Additionally, it identifies the peak hours when bike trips are most frequent, highlighting differences in riding habits between members and casual riders.
+<br>
 
 ```sql
 SELECT
@@ -187,14 +188,17 @@ ORDER BY
 </table>
 </div>
 
+<br>
+
 <p align="center" width="100%">
     <img width="85%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7b428d4b-5f10-40a2-89e2-c81013669609">
 </p>
 
+<br>
 
 ***
-3.
-
+3. This analysis focuses on bike trips and average ride lengths throughout the week over the course of a year, comparing data between member and casual riders. By examining this information, we aim to gain valuable insights and identify significant trends within the biking community. We will explore specific patterns of bike usage, evaluating how both member and casual riders utilize the bike-sharing system on different days of the week. This analysis will highlight variations in ride frequency and duration, offering a clear comparison between the two groups. Understanding these trends can provide actionable insights, this exploration will reveal usage patterns and help make data-driven decisions.
+<br>
 
 ```sql
 SELECT
@@ -243,13 +247,17 @@ ORDER BY
 </table>
 </div>
 
+<br>
+
 <p align="center" width="100%">
     <img width="95%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/d16ae077-d9fb-46ce-a238-304bc3987e1e">
 </p>
 
+<br>
 
 ***
-4.
+4. This analysis examines the monthly bike trips and average ride lengths for member versus casual riders over a year. We'll explore how both member and casual riders use the bike-sharing system each month, focusing on the number of trips and ride durations. This comparison will reveal differences in usage patterns and preferences between the two groups.By comparing these data points, we aim to uncover insights and identify trends that highlight the busiest months or seasons for bike usage. Overall, this analysis will provide a clear understanding of seasonal trends in bike-sharing services for both the groups.
+<br>
 
 ```sql
 SELECT
@@ -308,10 +316,15 @@ ORDER BY
 </table>
 </div>
 
+<br>
+
 ![Dashboard 2 (3)](https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/cb1c6ef6-89f9-4760-afee-7764fa19795e)
 
+<br>
+
 ***
-5.
+5. This analysis examines the top 10 bike-sharing stations used by member versus casual riders to identify trends and insights. By comparing the most popular stations for each group, we aim to understand usage patterns and preferences, such as commuter habits for members and recreational use for casual riders. Overall, this analysis will enhance our understanding of user behavior for member and casual riders.
+<br>
 
 ```sql
 SELECT
@@ -379,13 +392,18 @@ LIMIT
 </table>
 </div>
 
+<br>
+
 <p align="center" width="100%">
     <img width="45%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/7c4bc344-7341-4d7f-8a1d-39a775b606a7">
 	<img width="45%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/8225f34c-1f06-4b95-9a58-c0c9e11cef27">
 </p>
 
+<br>
+
 ***
-6.
+6. This analysis examines the different types of rideable vehicles, such as classic bikes, docked bikes and electric bikes, used by members and casual users in a bike-sharing service. By comparing the preferences and usage patterns of these two groups, we aim to uncover trends which will help make data-driven decisions.
+<br>
 
 ```sql
 SELECT
@@ -400,6 +418,7 @@ FROM
 GROUP BY
 	rideable_type;
 ```
+
 <div align="center">
 
 | rideable_type | total_bike_trip  | member_bike_trip  | casual_bike_trip  | member_percent | casual_percent |
@@ -410,6 +429,15 @@ GROUP BY
 
 </div>
 
+<br>
+
 <p align="center" width="100%">
     <img width="50%" src="https://github.com/anzarshaikh9/Cyclistic_analytics_2023--EXCEL-SQL-TABLEAU/assets/169331791/252e7dbd-f109-4569-abc6-aaebdc0b5821">
 </p>
+
+<br>
+
+***
+## Results/Findings
+
+- The hours between afternoon and evening are peak hours, especially at 5 p.m., for both members and casual riders.
