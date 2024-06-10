@@ -452,6 +452,7 @@ GROUP BY
 
 <br>
 
+***
 ## Recommendation
 
 - Create marketing campaigns targeting casual riders during weekends and summer months when their usage peaks.
