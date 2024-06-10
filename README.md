@@ -450,7 +450,7 @@ GROUP BY
 </p>
 
 >[!Important]
->**To see the visualization of "Cyclistic Analytical Dashboard 2023" [click here](https://public.tableau.com/app/profile/anzar.shaikh/viz/CyclisticTripdataDashboard2023/Dashboard1).**
+>**To see the interactive visualization of "Cyclistic Analytical Dashboard 2023" [click here](https://public.tableau.com/app/profile/anzar.shaikh/viz/CyclisticTripdataDashboard2023/Dashboard1).**
 
 <br>
 
