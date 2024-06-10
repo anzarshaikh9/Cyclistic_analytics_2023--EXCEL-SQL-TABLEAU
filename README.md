@@ -15,8 +15,8 @@
 3. [Data](#data)
 4. [Tools](#tools)
 5. [Data Manipulation](#data-manipulation)
-6. [Data Analysis & Visualization](#data-analysis-and-visualization)
-7. [Results/Findings](#results/findings)
+6. [Data Analysis & Visualization](#data-analysis--visualization)
+7. [Results/Findings](#results-/-findings)
 8. [Recommendation](#recommendation)
 
 ## Introduction
